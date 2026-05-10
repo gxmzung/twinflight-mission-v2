@@ -1,11 +1,17 @@
 # TwinFlight Mission v2
 
-ROS2·PX4 기반 자율비행 드론 발표용 미니 프로젝트입니다.
+### ROS2 / PX4 Mission Simulation Project
 
-v1이 단순히 ROS2에서 PX4로 Offboard 명령을 보내는 데모였다면, v2는 **시설 점검용 자율비행 임무 시뮬레이터** 형태로 구체화했습니다.
+TwinFlight Mission v2 is a ROS2 and PX4-based mission simulation project for demonstrating how high-level autonomous mission logic can be separated from low-level flight control.
+
+The project models a facility-inspection drone scenario using a YAML-defined waypoint mission, a ROS2 mission planner, an offboard mission node, PX4 SITL, Gazebo, and QGroundControl.
+
+This repository is not a real-flight deployment project.  
+It is a simulation-oriented software prototype designed to show the mission-control relationship between ROS2 and PX4.
+
+---
 
 ## 프로젝트 목적
-
 컴퓨팅사고 팀 발표에서 다음 메시지를 코드 구조로 보여주는 것이 목표입니다.
 
 > ROS2는 임무 경로 생성, 상태 관리, 상위 자율 기능을 담당하고, PX4는 자세 제어, 위치 제어, 고도 유지, 모터 제어 등 실제 비행 안정화를 담당한다.
@@ -99,7 +105,15 @@ ros2 run twinflight_mission mission_node --ros-args -p mission_file:=src/twinfli
 5. `rqt_graph` 노드 구조 화면
 6. 터미널 mission log 화면
 
-## 주의
+## Status and Limits
 
-이 프로젝트는 실제 기체 비행용이 아니라 발표용 SITL/Gazebo 시뮬레이션 구조 예시입니다.
-실제 드론에 연결하지 마세요.
+This project is intended for PX4 SITL / Gazebo simulation and educational demonstration.
+
+It does **not** claim:
+
+- real aircraft validation
+- flight-certified safety
+- production-grade autonomous flight
+- complete hardware integration
+
+Do not connect this project directly to a real drone without proper PX4, ROS2, safety, and hardware validation.
