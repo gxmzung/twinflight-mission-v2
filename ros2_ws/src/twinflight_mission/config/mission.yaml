@@ -1,8 +1,15 @@
 mission_name: campus_facility_inspection_demo
 description: "시설 점검용 자율비행 임무 시뮬레이션"
 
-# PX4는 NED 좌표계를 사용한다.
-# z가 음수이면 위쪽 방향이다.
+# ==========================================
+# 작성일: 2026. 05. 06
+# 작성자: 이영준
+# 내용: PX4 좌표계 설정 (NED 방식)
+#      - z가 음수(-)이면 위쪽(Up) 방향
+# ==========================================
+
+# PX4 uses North-East-Down (NED) coordinate system.
+# Z-axis is negative for upward direction.
 takeoff_altitude: 5.0
 
 waypoints:
